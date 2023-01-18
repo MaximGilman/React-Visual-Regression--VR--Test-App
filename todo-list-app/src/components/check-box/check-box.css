@@ -7,10 +7,6 @@
   margin: auto 30px auto 5px;
   border-radius: 10px;
 
-  @e checkmark {
-
-  }
-
   @m checked {
     background: #29abe2;
   }

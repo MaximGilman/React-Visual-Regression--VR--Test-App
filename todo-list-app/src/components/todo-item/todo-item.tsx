@@ -11,11 +11,17 @@ interface TodoItemProps {
 const b = block("todo-item");
 const TodoItem: FC<TodoItemProps> = (props) => {
   const [isChecked, setIsChecked] = useState(props.isChecked);
+ 
 
   return (
     <div className={b()}>
       <CheckBox isChecked={isChecked} onClick={setIsChecked} />
-      <span className={b("task-title", { isChecked: isChecked })}>{props.title}</span>
+      <span
+        className={b("task-title", { checked: isChecked })}
+        onClick={() => setIsChecked(!isChecked)}
+      >
+        {props.title}
+      </span>
     </div>
   );
 };

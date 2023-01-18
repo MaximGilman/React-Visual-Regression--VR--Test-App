@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { block } from "bem-cn";
 import "./check-box.css";
 
@@ -9,12 +9,19 @@ interface Props {
 
 const b = block("check-box");
 
-const CheckBox: FC<Props> = ({ isChecked, onClick }) => {
+const CheckBox: FC<Props> = (props) => {
+  const [isChecked, setIsChecked] = useState(props.isChecked);
+  React.useEffect(() => {
+    setIsChecked(props.isChecked);
+  }, [props.isChecked]);
+
   return (
     <div
-      className={b({ isChecked: isChecked })}
+      className={b({ checked: isChecked })}
       onClick={() => {
-        onClick(!isChecked);
+        setIsChecked(!isChecked);
+        props.onClick(!isChecked);
+        console.log(`changed ${isChecked}`);
       }}
     >
       {/* <img

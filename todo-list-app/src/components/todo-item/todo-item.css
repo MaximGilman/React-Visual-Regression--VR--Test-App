@@ -2,22 +2,18 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 16px;
+  padding: 6px 16px;
 
   @e task-title {
-    width: 159px;
-
     font-family: "Rubik";
     font-style: normal;
-    font-weight: 400;
-    font-size: 2em;
-    line-height: 36px;
-    /* identical to box height */
-    padding: auto;
-    text-decoration-line: line-through;
+    font-size: 32px;
+    line-height: 38px;
 
     /* Black / 90% */
-
     color: #161717;
+    @m checked {
+      text-decoration-line: line-through;
+    }
   }
 }
