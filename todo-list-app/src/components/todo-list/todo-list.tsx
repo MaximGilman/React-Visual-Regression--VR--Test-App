@@ -4,7 +4,7 @@ import { block } from "bem-cn";
 import { Task } from "../../models/task";
 import TodoItem from "../todo-item/todo-item";
 
-interface Props {
+export interface Props {
   items: Array<Task>;
 }
 
