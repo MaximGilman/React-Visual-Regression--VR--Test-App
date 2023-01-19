@@ -10,6 +10,7 @@ const isProduction = process.env.NODE_ENV == "production";
 
 const config = {
   entry: "./src/index.tsx",
+  devtool: "eval-source-map",
   output: {
     path: path.resolve(__dirname, "dist"),
   },

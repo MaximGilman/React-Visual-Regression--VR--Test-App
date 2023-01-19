@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import { block } from "bem-cn";
 import "./check-box.css";
+import Checkmark from "../checkmark/checkmark";
 
 interface Props {
   isChecked: boolean;
@@ -24,6 +25,7 @@ const CheckBox: FC<Props> = (props) => {
         console.log(`changed ${isChecked}`);
       }}
     >
+      {isChecked && <Checkmark />}
       {/* <img
         src={checkmark}
         alt="checkmark"

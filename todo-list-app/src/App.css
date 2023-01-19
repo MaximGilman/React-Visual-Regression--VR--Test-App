@@ -2,5 +2,6 @@
   @e header {
     padding: 16px;
     font-family: "Rubik";
+    user-select: none;
   }
 }

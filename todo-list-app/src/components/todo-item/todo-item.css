@@ -1,15 +1,15 @@
 @b todo-item {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 6px 16px;
+  align-items: flex-start;
+  padding: 6px 32px;
 
   @e task-title {
     font-family: "Rubik";
     font-style: normal;
     font-size: 32px;
     line-height: 38px;
-
+    user-select: none; 
     /* Black / 90% */
     color: #161717;
     @m checked {
