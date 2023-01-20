@@ -1,9 +1,10 @@
-import { Meta } from "@storybook/react/types-6-0";
-import { Story } from "@storybook/react";
+import { ComponentStory, ComponentMeta } from "@storybook/react";
 import App from "../App";
+import "../App.css";
+
 export default {
   title: "Components/Todolist",
   component: App,
-} as Meta;
+} as ComponentMeta<typeof App>;
 
-export const AppTemplate: Story = () => <App />;
+export const Primary: ComponentStory<typeof App> = () => <App />;

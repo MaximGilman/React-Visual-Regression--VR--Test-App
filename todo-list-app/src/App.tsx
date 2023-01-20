@@ -1,6 +1,7 @@
 import "./App.css";
 import TodoList from "./components/todo-list/todo-list";
 import { block } from "bem-cn";
+import "@fontsource/rubik";
 
 function App() {
 
